@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
 import { format } from 'date-fns'
+import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
   const now = new Date()
   const formattedTime = format(now, "MMMM do, yyyy — h:mm:ss a")
 
   return (
-    <>
-      <p>Current date and time: {formattedTime}</p>
-    </>
+    // separate components for each class for ease of styling
+    <div className="clock-card">
+      <p className="clock-label">Current Date & Time</p>
+      <p className="clock-time">{formattedTime}</p>
+    </div>
   )
 }
 
